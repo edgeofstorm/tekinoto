@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+<h1 class="h2">Parça ekle</h1>
+{% endblock title %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    </br>
+    <input type="submit" value="&emsp;Ekle&emsp;" class="btn btn-primary">
+</form>
+
+<script>
+    $(document).ready(function () {
+        $('#error_1_id_name').html('<strong>Bu parça zaten mevcut</strong>')
+    });
+</script>
+
+{% endblock content %}

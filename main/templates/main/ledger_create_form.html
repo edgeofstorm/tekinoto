@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<h1 class="h2">Yeni Kayıt Oluştur</h1>
+{% endblock title %}
+
+
+
+{% block content %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ person_form|crispy }}
+    {{ order_form|crispy }}
+    {{ ledger_form|crispy }}
+    </br>
+    <button class="btn btn-primary">&emsp;  Oluştur &emsp; </button>
+
+</form>
+
+<script>
+    $(document).ready(function () {
+        $('#id_item').select2({
+            placeholder: "Aramak icin Parca ismini giriniz",
+            allowClear: true
+        });
+        $('#div_id_item').children().eq(0).html("Ilk olusturma icin Parca seciniz *")
+        $('#error_1_id_fullname').html('<strong>Bu isme sahip şahıs zaten mevcut</strong>')
+        $('#error_1_id_phone_number').html('<strong>Bu telefona sahip şahıs zaten mevcut</strong>')
+    });
+
+</script>
+
+{% endblock content %}

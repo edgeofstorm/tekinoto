@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<h1 class="h2">{{object.person}} - {{object.items.item.name}} - {{object.timestamp}} kaydını Güncelle</h1></br>
+
+{% endblock title %}
+
+{% block content %}
+<p class="h6"> - Tamamı ödendiyse sadece Ödendi seçeneğini işaretleyip güncelleyiniz (Ödenen miktar kısmını boş bırakınız)</p><br>
+<p class="h6"> - Kısmi olarak ödendiyse sadece ödenen miktarı girip güncelleyiniz (Ödendi seçeneğini boş bırakınız)</p></br>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    </br>
+    <button class="btn btn-primary"> Güncelle </button>
+
+</form>
+
+{% endblock content %}

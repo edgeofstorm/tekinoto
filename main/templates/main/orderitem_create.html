@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<h1 class="h2">{{person}} hesabına Yeni Sipariş(Borç) Gir</h1>
+{% endblock title %}
+
+
+
+{% block content %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    </br>
+    <button class="btn btn-primary"> Ekle </button>
+
+</form>
+
+<script>
+    $(document).ready(function () {
+        $('#id_item').select2({
+            placeholder: "Aramak icin Parca ismini giriniz",
+            allowClear: true
+        });
+    });
+
+</script>
+
+{% endblock content %}

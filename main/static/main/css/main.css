@@ -1,0 +1,40 @@
+
+.row{
+    margin-top:40px;
+    padding: 0 10px;
+}
+.clickable{
+    cursor: pointer;   
+}
+
+.panel-heading div {
+    margin-top: -18px;
+    font-size: 15px;
+}
+.panel-heading div span{
+    margin-left:5px;
+}
+.panel-body{
+    display: none;
+}
+
+
+.table td {
+    text-align: center;   
+ }
+ .table th {
+    text-align: center;   
+ }
+
+ hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color:black;
+    height: 1px;
+  }
+
+.nav-item{
+    margin-top: 0.5rem;
+}
